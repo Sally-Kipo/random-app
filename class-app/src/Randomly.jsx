@@ -8,7 +8,7 @@ import { Container, GroupImage, GroupName, GroupWrapper } from './randomly.style
 
 const StudentGroups = () => {
   const [students, setStudents] = useState(['სალომე', 'ანი', 'მარი', 'თორნიკე', 'სოფია']);
-  const [groups, setGroups] = useState([[], [], []]);
+  const [groups, setGroups] = useState([[], [], [], []]);
 
   useEffect(() => {
     if (students.length === 0) {
@@ -20,7 +20,7 @@ const StudentGroups = () => {
     if (students.length === 0) return;
 
     const shuffledStudents = shuffleArray([...students]);
-    const updatedGroups = [[], [], []];
+    const updatedGroups = [[], [], [], []];
 
     shuffledStudents.forEach((student, index) => {
       const randomGroupIndex = index % updatedGroups.length;
